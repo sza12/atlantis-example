@@ -26,4 +26,4 @@ projects:
   workspace: default
   autoplan:
     when_modified: ["*.tf","../../modules/server/*.tf"]
-    enabled: true
+    enabled: true 
