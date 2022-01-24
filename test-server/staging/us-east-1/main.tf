@@ -37,4 +37,4 @@ resource "aws_instance" "staging-web" {
   tags = {
     Name = "Staging"
   }
-}
+} 
