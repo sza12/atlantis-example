@@ -15,7 +15,7 @@ projects:
     enabled: true
 
 - name: staging_global
-  dir: test-server/staging/gobal
+  dir: test-server/staging/global
   workspace: default
   autoplan:
     when_modified: ["*.tf"]
