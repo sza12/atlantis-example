@@ -33,3 +33,7 @@ resource "aws_iam_role" "test_role1" {
 }
 EOF
 }
+
+module "server" {
+    source        = "../../modules/server"
+}
