@@ -11,5 +11,12 @@ projects:
   dir: test-server/staging/us-east-1
   workspace: default
   autoplan:
-    when_modified: ["*.tf","../global/*.tf"]
+    when_modified: ["*.tf","../../modules/server/*.tf"]
+    enabled: true
+
+- name: staging_global
+  dir: test-server/staging/global
+  workspace: default
+  autoplan:
+    when_modified: ["*.tf","../../modules/server_global/*.tf"]
     enabled: true
