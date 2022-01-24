@@ -5,7 +5,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     encrypt = true    
-    bucket = "hella-buckets-213213123121"
+    bucket = "hella-buckets-213213123121a"
     key    = "main/terraform.tfstate"
     region = "us-east-1"
   }
