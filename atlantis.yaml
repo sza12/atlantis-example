@@ -19,4 +19,4 @@ projects:
   workspace: default
   autoplan:
     when_modified: ["*.tf"]
-    enabled: false
+    enabled: true
