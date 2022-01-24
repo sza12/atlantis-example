@@ -7,16 +7,23 @@ projects:
     when_modified: ["*.tf", "../modules/**/*.tf"]
     enabled: false
 
-- name: staging_us_east_1
-  dir: test_server/staging/us-east-1
+- name: test_server/**/us-east-1
+  dir: test_server/**/us-east-1
   workspace: default
   autoplan:
     when_modified: ["*.tf","../../modules/server/*.tf"]
     enabled: true
 
-- name: staging_global
+- name: test_server/staging/global
   dir: test_server/staging/global
   workspace: default
   autoplan:
     when_modified: ["*.tf","../../modules/server_global/*.tf"]
     enabled: true
+
+# - name: test_server/deploy_testing/us-east-1
+#   dir: test_server/deploy_testing/us-east-1
+#   workspace: default
+#   autoplan:
+#     when_modified: ["*.tf","../../modules/server_global/*.tf"]
+#     enabled: true
