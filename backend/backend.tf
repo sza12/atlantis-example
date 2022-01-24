@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "tf_course" {
-    bucket = "hella-buckets-21321312312"
+    bucket = "hella-buckets-213213123121"
     acl = "private"
 }
 
