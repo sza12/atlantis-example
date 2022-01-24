@@ -37,4 +37,4 @@ resource "aws_instance" "production-web" {
   tags = {
     Name = "Production"
   }
-}
+} 
