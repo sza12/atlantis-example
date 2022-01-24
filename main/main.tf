@@ -5,7 +5,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     encrypt = true    
-    bucket = "hella-buckets-21321312312"
+    bucket = "hella-buckets-213213123121"
     dynamodb_table = "terraform-state-lock-dynamo"
     key    = "terraform.tfstate"
     region = "us-east-1"
