@@ -9,7 +9,7 @@ terraform {
   backend "s3" {
     encrypt = true    
     bucket = "hella-buckets-21321312312"
-    key    = "terraform.tfstate"
+    key    = "test_server/staging/global/terraform.tfstate"
     region = "us-east-1"
   }
 }
