@@ -14,8 +14,8 @@ terraform {
   }
 }
 
-resource "aws_iam_role" "test_role" {
-  name = "test_role"
+resource "aws_iam_role" "test_role1" {
+  name = "test_role1"
 
   assume_role_policy = <<EOF
 {
