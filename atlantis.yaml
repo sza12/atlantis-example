@@ -7,8 +7,8 @@ projects:
     when_modified: ["*.tf", "../modules/**/*.tf"]
     enabled: false
 
-- name: test_server/**/us-east-1
-  dir: test_server/*/us-east-1
+- name: test_server/staging/us-east-1
+  dir: test_server/staging/us-east-1
   workspace: default
   autoplan:
     when_modified: ["*.tf","../../modules/server/*.tf"]
