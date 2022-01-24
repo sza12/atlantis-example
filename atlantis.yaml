@@ -21,9 +21,9 @@ projects:
     when_modified: ["*.tf","../../modules/server_global/*.tf"]
     enabled: true
 
-# - name: test_server/deploy_testing/us-east-1
-#   dir: test_server/deploy_testing/us-east-1
-#   workspace: default
-#   autoplan:
-#     when_modified: ["*.tf","../../modules/server_global/*.tf"]
-#     enabled: true
+- name: test_server/deploy_testing/us-east-1
+  dir: test_server/deploy_testing/us-east-1
+  workspace: default
+  autoplan:
+    when_modified: ["*.tf","../../modules/server/*.tf"]
+    enabled: true
