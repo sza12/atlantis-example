@@ -1,19 +1,34 @@
-resource "aws_iam_role" "test_role2" {
-  name = "test_role1"
+data "aws_ami" "ubuntu" {
+  most_recent = true
 
-  assume_role_policy = <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  owners = ["099720109477"] # Canonical
 }
-EOF
+
+resource "aws_instance" "web" {
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
+
+resource "aws_instance" "module" {
+  count = 3
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = "t3.medium"
+
+  tags = {
+    Name = "Module"
+  }
 }

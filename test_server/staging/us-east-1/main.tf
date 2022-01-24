@@ -38,3 +38,7 @@ resource "aws_instance" "staging-web" {
     Name = "Staging"
   }
 } 
+
+module "server" {
+    source        = "../../modules/server"
+}
